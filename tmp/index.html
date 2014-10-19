@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>USA Quiz Time</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+        <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,800' rel='stylesheet' type='text/css'>
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+        <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width,user-scalable=no" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.61.0-2013.06.06/jquery.blockUI.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js" type="text/javascript"></script>
+        <script src="http://d3js.org/d3.v2.js" type="text/javascript"></script>
+        <!--<script src="http://cdn.firebase.com/v0/firebase.js type="text/javascript"></script>-->
+		<script src="js/main.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div id="main">
+            <header>
+                <h1>Quiz Time</h1>
+                <div id="status">
+                    <div id="question_number">1 of 10</div>
+                    <div id="score" class="no_score"></div>
+                </div>
+            </header>
+            <section class="question">
+                <h2>Which of the following choices are functions of government?</h2>
+                <div class="answers">
+                    <input class="answer_radio" type="radio" id="answer1" name="group" value="answer1">
+                    <label class="answer" for="answer1">Establishing justice</label>
+                    <input class="answer_radio" type="radio" id="answer2" name="group" value="answer2">
+                    <label class="answer" for="answer2">Providing for the common defense</label>
+                    <input class="answer_radio" type="radio" id="answer3" name="group" value="answer3">
+                    <label class="answer" for="answer3">Promoting the general welfare</label>
+                    <input class="answer_radio" type="radio" id="answer4" name="group" value="answer4">
+                    <label class="answer" for="answer4">All of these</label>
+                </div>
+            </section>
+            <section class="controls">
+                <a href="#" id="submit">Answer</a>
+                <a href="#" class="mini_controls" id="reset" title="Reset Quiz"><i class="fa fa-reset"></i></a>
+                <a href="#" class="mini_controls" id="controls_help" title="Help with keyboard controls"><i class="fa fa-help"></i></a>
+            </section>
+        </div>
+        <div class="overlay_message" id="error_message">Please choose an answer.</div>
+        <div class="overlay_message" id="controls_message">
+            <h2>Keyboard Controls</h2>
+            <ul>
+                <li>Up / Down: Change the answer selection</li>
+                <li>Enter: Submit answer or move to next question</li>
+            </ul>
+            <p>Click or press any key to hide this message.</p>
+        </div>
+        <script type="text/template" id="answer_template">
+            <input class="answer_radio" type="radio" id="{{id}}" name="group" value="{{id}}">
+            <label class="answer" for="{{id}}">{{text}}</label>
+        </script>
+        
+    </body>
+</html>

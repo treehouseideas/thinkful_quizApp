@@ -1,0 +1,192 @@
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  color: steelblue;
+}
+
+#main {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0 auto 0 auto;
+}
+
+#main header {
+  padding-left: 1.4em;
+  padding-right: 1.4em;
+  height: 2.6em;
+  margin: 0;
+  padding-top: 1.1em;
+  padding-bottom: 1em;
+  box-shadow: 3px 3px 3px #cccccc;
+  background-color: dimgrey;
+  color: lightblue;
+}
+
+#main header h1 {
+  float: left;
+  font-size: 2.3em;
+  font-weight: 800;
+  text-shadow: -1px -1px 1px #cccccc;
+}
+
+#main header #status {
+  float: right;
+  padding-top: 0;
+}
+
+#question_number {
+  text-align: right;
+  font-size: 1.3em;
+  font-weight: 800;
+}
+
+#score {
+  text-align: right;
+  font-size: 0.8em;
+  font-weight: 800;
+}
+
+.no_score {
+  display: none;
+}
+
+.question {
+  padding-left: 1.4em;
+  padding-right: 1.4em;
+  height: 17em;
+  padding-top: 1.2em;
+  padding-bottom: 8em;
+}
+
+.question h2 {
+  font-size: 1.4em;
+  font-weight: 800;
+}
+
+.question h2.show_answer {
+  font-weight: 600;
+}
+
+.question h2 span {
+  font-weight: 800;
+}
+
+.answers {
+  margin-top: 0.6em;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  line-height: 1.2em;
+}
+
+.answer_radio {
+  display: none;
+}
+
+.answer {
+  display: block;
+  padding: 0.8em;
+  font-size: 1.2em;
+}
+
+.answer:hover {
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+.answer_radio:checked + .answer {
+  background-color: #dddddd;
+  border-radius: 3px;
+}
+
+.controls {
+  padding-left: 1.4em;
+  padding-right: 1.4em;
+  position: absolute;
+  box-sizing: border-box;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 0.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.9em;
+}
+
+#submit {
+  float: left;
+  margin-top: -1.2em;
+  display: inline-block;
+  padding: 1.2em;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  background-color: #dddddd;
+  font-size: 1.2em;
+  font-weight: 800;
+}
+
+.mini_controls {
+  display: inline-block;
+  float: right;
+  margin-top: 0.2em;
+  font-size: 1.6em;
+}
+
+#reset {
+  padding-right: 0;
+}
+
+#controls_help {
+  padding-right: 0.6em;
+}
+
+#controls_message h2 {
+  font-size: 1.6em;
+}
+
+#controls_message ul {
+  margin-top: 1em;
+}
+
+#controls_message p {
+  margin-top: 1em;
+  font-size: 0.7em;
+}
+
+.overlay_message {
+  display: none;
+  padding: 1em;
+  background-color: steelblue;
+  color: white;
+}
+
+/* d3 styles */
+svg {
+  margin-top: 1em;
+}
+
+.chart {
+  display: none;
+}
+
+.chart rect {
+  stroke: white;
+  fill: steelblue;
+}
+
+.chart text {
+  fill: #222;
+  font-size: 0.9em;
+}
+
+.chart .rule {
+  fill: #222;
+  font-size: 0.6em;
+}
